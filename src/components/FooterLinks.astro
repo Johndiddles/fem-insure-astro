@@ -1,0 +1,32 @@
+---
+import FooterColumn from "./FooterColumn.astro";
+import FooterLink from "./FooterLink.astro";
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 py-10">
+  <FooterColumn name="our company">
+    <FooterLink name="how we work" link="#" />
+    <FooterLink name="why insure?" link="#" />
+    <FooterLink name="view plans" link="#" />
+    <FooterLink name="reviews" link="#" />
+  </FooterColumn>
+
+  <FooterColumn name="help me">
+    <FooterLink name="FAQ" link="#" />
+    <FooterLink name="terms of use" link="#" />
+    <FooterLink name="privacy policy" link="#" />
+    <FooterLink name="cookies" link="#" />
+  </FooterColumn>
+
+  <FooterColumn name="Contact">
+    <FooterLink name="sales" link="#" />
+    <FooterLink name="support" link="#" />
+    <FooterLink name="live chat" link="#" />
+  </FooterColumn>
+
+  <FooterColumn name="others">
+    <FooterLink name="careers" link="#" />
+    <FooterLink name="press" link="#" />
+    <FooterLink name="licenses" link="#" />
+  </FooterColumn>
+</div>

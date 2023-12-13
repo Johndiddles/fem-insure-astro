@@ -1,5 +1,5 @@
 ---
-import type { string } from 'astro/zod';
+import type { string } from "astro/zod";
 export interface Props {
   text: string;
   theme: "dark" | "light";
@@ -14,9 +14,11 @@ const { text, theme, onClick, styles } = Astro.props as Props;
   onclick={onClick}
   class={`${
     theme === "dark"
-      ? "border-dark-primary text-dark-primary md:hover:bg-dark-primary md:hover:text-neutral" : theme === "light" ? "border-neutral text-neutral md:hover:bg-neutral md:hover:text-dark-primary"
-      : ""
-  } border-2 px-8 py-2 uppercase font-bold font-karla text-base bg-transparent duration-300 ${styles}`}
+      ? "border-dark-primary text-dark-primary md:hover:bg-dark-primary md:hover:text-neutral"
+      : theme === "light"
+        ? "border-neutral text-neutral md:hover:bg-neutral md:hover:text-dark-primary"
+        : ""
+  } border-2 px-6 py-2 uppercase font-bold font-karla text-sm bg-transparent duration-300 ${styles}`}
 >
   {text}
 </button>

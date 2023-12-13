@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import style from "../styles/global.css";
 import mobileNavStyles from "../styles/mobile-nav.css";
@@ -23,8 +24,9 @@ const { title = "Welcome to Insure" } = Astro.props;
     <link href={mobileNavStyles} rel="text/stylesheet" />
     <title>{title}</title>
   </head>
-  <body class="font-karla">
+  <body class="font-karla min-h-[100svh] flex flex-col">
     <Header />
     <slot />
+    <Footer />
   </body>
 </html>
