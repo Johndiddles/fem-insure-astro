@@ -1,14 +1,14 @@
---- 
+---
 export interface Props {
   removePadding?: boolean;
   styles?: string;
 }
 
-const {removePadding, styles} = Astro.props as Props;
+const { removePadding = false, styles } = Astro.props as Props;
 ---
-<div class={`w-full ${removePadding ? "p-0" : "p-8"} ${styles}`}>
+
+<div class={`w-full ${removePadding ? "p-0" : "p-8 md:p-10"} ${styles}`}>
   <div class="w-full max-w-[1200px] mx-auto">
     <slot />
   </div>
 </div>
-

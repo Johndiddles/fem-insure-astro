@@ -1,0 +1,15 @@
+.how-we-work-bg {
+  background-image: url("/bg-pattern-how-we-work-mobile.svg");
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .how-we-work-bg {
+    background-image: url("/bg-pattern-how-we-work-desktop.svg");
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+}

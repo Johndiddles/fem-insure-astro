@@ -1,0 +1,21 @@
+---
+import Button from "./Button.astro";
+import Container from "./Container.astro";
+
+import "../styles/find-out-more.css";
+---
+
+<div>
+  <Container>
+    <div
+      class="w-full bg-primary flex flex-col md:flex-row gap-10 items-center justify-between px-6 py-12 md:px-20 md:py-16 text-neutral how-we-work-bg"
+    >
+      <div
+        class="text-[2.25rem] leading-[2.75rem] md:text-5xl font-display text-center md:text-left w-full md:w-[18ch]"
+      >
+        Find out more <div class="hidden md:block"></div> about how we work
+      </div>
+      <Button theme="light" text="How we work" onClick="" />
+    </div>
+  </Container>
+</div>

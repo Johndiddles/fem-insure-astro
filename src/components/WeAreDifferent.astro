@@ -1,0 +1,47 @@
+---
+import Card from "./Cards.astro";
+import Container from "./Container.astro";
+
+import thunderbold from "../images/icon-snappy-process.svg?url";
+import money from "../images/icon-affordable-prices.svg?url";
+import person from "../images/icon-people-first.svg?url";
+---
+
+<div class="pt-10 pb-10 lg:pt-[240px]">
+  <Container>
+    <div
+      class="flex flex-col gap-5 items-center md:items-start text-center md:text-left"
+    >
+      <div
+        class="mx-auto md:mx-0 pb-4 md:pb-4 lg:pb-8 w-[150px] border-t border-t-accent"
+      >
+      </div>
+      <h1
+        class="text-[2.8rem] md:text-[2.8rem] lg:text-[4rem] xl:text-[5rem] font-display text-dark-primary"
+      >
+        We're different
+      </h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10 md:mt-20">
+        <Card
+          title="Snappy Process"
+          text="Our application process can be completed in minutes, not hours. Don’t get stuck filling in tedious forms."
+          imgAlt="thunderbold"
+          imgSrc={thunderbold}
+        />
+        <Card
+          title="Affordable Prices"
+          text="We don’t want you worrying about high monthly costs. Our prices may be low, but we still offer the best coverage possible."
+          imgAlt="dollar sign"
+          imgSrc={money}
+        />
+        <Card
+          title="People First"
+          text="Our plans aren’t full of conditions and clauses to prevent payouts. We make sure you’re covered when you need it."
+          imgAlt="person"
+          imgSrc={person}
+        />
+      </div>
+    </div>
+  </Container>
+</div>

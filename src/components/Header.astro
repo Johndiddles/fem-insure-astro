@@ -4,22 +4,29 @@ import HeaderLink from "./HeaderLink.astro";
 import Button from "./Button.astro";
 
 import logo from "../images/logo.svg?url";
-
-
 ---
 
-<header class="w-full bg-neutral md:relative" id="header">
+<header class="w-full bg-neutral md:relative z-10" id="header">
   <Container removePadding styles="md:px-8 md:py-5 p-0">
-    <nav class="flex flex-col md:flex-row md:justify-between items-center md:h-fit" id="navbar">
+    <nav
+      class="flex flex-col md:flex-row md:justify-between items-center md:h-fit"
+      id="navbar"
+    >
       <div class="flex justify-between w-full md:w-fit items-center p-6 md:p-0">
         <div>
-          <img src={logo} alt="insure"  />
+          <img src={logo} alt="insure" />
         </div>
-        
-        <button class="md:hidden border-2 px-3 py-1 uppercase font-bold font-karla text-base bg-transparent duration-300 hover:bg-dark-primary hover:text-neutral" id="hamburger-menu">X</button>
-      </div>    
 
-      <div class="hidden md:flex items-center gap-8 bg-transparent py-0" id="nav">
+        <button
+          class="md:hidden border-2 px-3 py-1 uppercase font-bold font-karla text-base bg-transparent duration-300 hover:bg-dark-primary hover:text-neutral"
+          id="hamburger-menu">X</button
+        >
+      </div>
+
+      <div
+        class="hidden md:flex items-center gap-8 bg-transparent py-0"
+        id="nav"
+      >
         <HeaderLink name="How we work" link="#" />
         <HeaderLink name="Blog" link="#" />
         <HeaderLink name="Account" link="#" />
@@ -27,11 +34,19 @@ import logo from "../images/logo.svg?url";
       </div>
 
       <div class="w-full block md:hidden" id="mobileNavbarWrapper">
-        <div class="hidden md:hidden flex-col w-full h-full px-5 items-center gap-8 bg-dark-primary py-10 mobileNav" id="mobileNavbar">
-          <HeaderLink name="How we work" link="#" styles="text-lg"/>
-          <HeaderLink name="Blog" link="#" styles="text-lg"/>
-          <HeaderLink name="Account" link="#" styles="text-lg"/>
-          <Button onClick="" text="View Plans" theme="light" styles="w-full max-w-[400px] py-3 text-lg" />
+        <div
+          class="hidden md:hidden flex-col w-full h-full px-5 items-center gap-8 bg-dark-primary py-10 mobileNav"
+          id="mobileNavbar"
+        >
+          <HeaderLink name="How we work" link="#" styles="text-lg" />
+          <HeaderLink name="Blog" link="#" styles="text-lg" />
+          <HeaderLink name="Account" link="#" styles="text-lg" />
+          <Button
+            onClick=""
+            text="View Plans"
+            theme="light"
+            styles="w-full max-w-[400px] py-3 text-lg"
+          />
         </div>
       </div>
     </nav>
@@ -39,32 +54,31 @@ import logo from "../images/logo.svg?url";
 </header>
 
 <script>
-  const hamburger = document.getElementById("hamburger-menu")
-  const navbar = document.getElementById("navbar")
-  const header = document.getElementById("header")
-  const mobileNavbarWrapper = document.getElementById("mobileNavbarWrapper")
-  const mobileNavbar = document.getElementById("mobileNavbar")
+  const hamburger = document.getElementById("hamburger-menu");
+  const navbar = document.getElementById("navbar");
+  const header = document.getElementById("header");
+  const mobileNavbarWrapper = document.getElementById("mobileNavbarWrapper");
+  const mobileNavbar = document.getElementById("mobileNavbar");
 
-  let isMobileNavbarOpen = false
+  let isMobileNavbarOpen = false;
 
-  hamburger.addEventListener("click", function(e){
-    if(isMobileNavbarOpen){
-      mobileNavbar.classList.remove("flex")
-      mobileNavbar.classList.add("hidden")
-      mobileNavbarWrapper.classList.remove("flex-grow")
-      navbar.classList.remove("h-screen")
-      header.classList.remove("absolute")
-      
+  hamburger!.addEventListener("click", function (e) {
+    if (isMobileNavbarOpen) {
+      mobileNavbar!.classList.remove("flex");
+      mobileNavbar!.classList.add("hidden");
+      mobileNavbarWrapper!.classList.remove("flex-grow");
+      navbar!.classList.remove("h-screen");
+      header!.classList.remove("absolute");
+
       isMobileNavbarOpen = false;
     } else {
-      mobileNavbar.classList.add("flex")
-      mobileNavbar.classList.remove("hidden")
-      mobileNavbarWrapper.classList.add("flex-grow")
-      navbar.classList.add("h-screen")
-      header.classList.add("absolute")
+      mobileNavbar!.classList.add("flex");
+      mobileNavbar!.classList.remove("hidden");
+      mobileNavbarWrapper!.classList.add("flex-grow");
+      navbar!.classList.add("h-screen");
+      header!.classList.add("absolute");
 
-      isMobileNavbarOpen = true
+      isMobileNavbarOpen = true;
     }
-  })
-
-</script >
+  });
+</script>
