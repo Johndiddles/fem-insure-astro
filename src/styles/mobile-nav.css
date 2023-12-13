@@ -1,0 +1,6 @@
+.mobileNav {
+  background-image: url("/bg-pattern-mobile-nav.svg");
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
