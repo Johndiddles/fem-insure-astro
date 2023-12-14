@@ -13,7 +13,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Insure page](./screenshot.jpg)
+![Insure page](./screenshot.png)
 
 ### Links
 
