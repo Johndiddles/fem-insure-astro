@@ -4,6 +4,8 @@ import HeaderLink from "./HeaderLink.astro";
 import Button from "./Button.astro";
 
 import logo from "../images/logo.svg?url";
+import menu from "../images/icon-hamburger.svg?url";
+import close from "../images/icon-close.svg?url";
 ---
 
 <header class="w-full bg-neutral md:relative z-20" id="header">
@@ -17,10 +19,9 @@ import logo from "../images/logo.svg?url";
           <img src={logo} alt="insure" />
         </div>
 
-        <button
-          class="md:hidden border-2 px-3 py-1 uppercase font-bold font-karla text-base bg-transparent duration-300 hover:bg-dark-primary hover:text-neutral"
-          id="hamburger-menu">X</button
-        >
+        <button class="md:hidden duration-300" id="hamburger-menu">
+          <img src={menu} alt="menu toggler" id="hamburger-menu-image" />
+        </button>
       </div>
 
       <div
@@ -54,7 +55,13 @@ import logo from "../images/logo.svg?url";
 </header>
 
 <script>
+  import menu from "../images/icon-hamburger.svg?url";
+  import close from "../images/icon-close.svg?url";
+
   const hamburger = document.getElementById("hamburger-menu");
+  const hamburgerMenuImage = document.getElementById(
+    "hamburger-menu-image"
+  ) as HTMLImageElement;
   const navbar = document.getElementById("navbar");
   const header = document.getElementById("header");
   const mobileNavbarWrapper = document.getElementById("mobileNavbarWrapper");
@@ -68,7 +75,8 @@ import logo from "../images/logo.svg?url";
       mobileNavbar!.classList.add("hidden");
       mobileNavbarWrapper!.classList.remove("flex-grow");
       navbar!.classList.remove("h-screen");
-      header!.classList.remove("absolute");
+      header!.classList.remove("fixed");
+      hamburgerMenuImage!.src = menu;
 
       isMobileNavbarOpen = false;
     } else {
@@ -76,7 +84,8 @@ import logo from "../images/logo.svg?url";
       mobileNavbar!.classList.remove("hidden");
       mobileNavbarWrapper!.classList.add("flex-grow");
       navbar!.classList.add("h-screen");
-      header!.classList.add("absolute");
+      header!.classList.add("fixed");
+      hamburgerMenuImage!.src = close;
 
       isMobileNavbarOpen = true;
     }
