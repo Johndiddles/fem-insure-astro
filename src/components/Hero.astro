@@ -3,14 +3,18 @@ import Container from "./Container.astro";
 import Button from "./Button.astro";
 
 import familyImage from "../images/image-intro-desktop.jpg?url";
+
+import "../styles/hero.css";
 ---
 
 <div
-  class="w-full pt-0 pb-10 md:py-10 lg:py-20 bg-primary text-neutral max-h-fit"
+  class="w-full pt-0 pb-10 md:py-10 lg:py-20 bg-primary text-neutral max-h-fit relative"
 >
   <Container styles="px-0 py-0 h-full">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 h-fit relative">
-      <div class="block py-20 md:py-0 h-full">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 md:gap-5 lg:gap-8 h-fit relative"
+    >
+      <div class="block py-20 md:py-0 h-full mobile-hero-bg-left">
         <div
           class="h-fit flex flex-col justify-between items-center md:items-start gap-8 text-center md:text-left px-5 md:px-0"
         >
@@ -19,11 +23,11 @@ import familyImage from "../images/image-intro-desktop.jpg?url";
           >
           </div>
           <h1
-            class="text-[2.8rem] md:text-[2.8rem] lg:text-[4rem] xl:text-[5rem] font-display"
+            class="text-[2.8rem] sm:text-[3.5rem] lg:text-[4rem] xl:text-[4.5rem] leading-[3rem] lg:leading-[4rem] xl:leading-[4.25rem] font-display w-[14ch]"
           >
             Humanizing your insurance.
           </h1>
-          <p class="text-[17px] md:text-base">
+          <p class="text-[17px] md:text-base w-full sm:w-[48ch] md:w-full">
             Get your life insurance coverage easier and faster. We blend our
             expertise and technology to help you find the plan that’s right for
             you. Ensure you and your loved ones are protected.
@@ -36,4 +40,14 @@ import familyImage from "../images/image-intro-desktop.jpg?url";
       </div>
     </div>
   </Container>
+
+  <!-- background images  -->
+  <div
+    class="hidden md:block hero-bg-left h-full w-1/2 absolute -bottom-[50%] left-0"
+  >
+  </div>
+  <div
+    class="hero-bg-right h-full w-1/2 absolute -bottom-[85%] md:-top-20 right-0"
+  >
+  </div>
 </div>
