@@ -5,7 +5,6 @@ import Button from "./Button.astro";
 
 import logo from "../images/logo.svg?url";
 import menu from "../images/icon-hamburger.svg?url";
-import close from "../images/icon-close.svg?url";
 ---
 
 <header class="w-full bg-neutral md:relative z-20" id="header">
@@ -69,7 +68,7 @@ import close from "../images/icon-close.svg?url";
 
   let isMobileNavbarOpen = false;
 
-  hamburger!.addEventListener("click", function (e) {
+  hamburger!.addEventListener("click", function () {
     if (isMobileNavbarOpen) {
       mobileNavbar!.classList.remove("flex");
       mobileNavbar!.classList.add("hidden");
